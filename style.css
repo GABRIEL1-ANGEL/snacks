@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: url(mountain.webp) no-repeat center;
+    background-size: cover;
+    width: 100px;
+    height: 600px;
+    object-fit: cover;
+}
+
+h1 {
+    margin-left: 500px;
+    margin-top: 3rem;
+    font-size: 5rem;
+}
+
+
+#accordion {
+    margin : 100px auto;
+    width : 600px;
+    margin-left: 400px;
+    /* margin-bottom:30px ; */
+}
+
+#accordion li {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 10px;
+}
+
+#accordion li label {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: dodgerblue;
+    cursor: pointer;
+}
+
+#accordion li label span {
+    transform: rotate(90deg);
+    font-size: 22px;
+    color: dodgerblue;
+}
+
+#accordion label + input[type="radio"] {
+    display: none;
+}
+
+#accordion .container {
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+#accordion label + input[type="radio"]:checked + .container {
+    max-height: 400px;
+}
